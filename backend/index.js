@@ -24,7 +24,7 @@ app.post('/', async (req, res) => {
     if (!Array.isArray(chats) || chats.length === 0) {
       return res.status(400).json({ error: 'Invalid input: "chats" should be a non-empty array.' });
     }
-
+    
     const result = await  openai.chat.completions.create({
       model: 'gpt-4.0-turbo',
       messages: [
