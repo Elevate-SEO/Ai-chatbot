@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const openai = new OpenAI({
-    apiKey: "API+Key",
+    apiKey: "",
 });
 
 app.post('/', async (req, res) => {
